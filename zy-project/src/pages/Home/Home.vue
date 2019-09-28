@@ -22,11 +22,11 @@
    <div class="home-grid">
      <ul class="home-grid-top">
        <li class="iconfont">
-         &#xe674;
+         &#xe600;
          <span class="home-grid-font">网易自营品牌</span>
        </li>
        <li class="iconfont">
-         &#xe600;
+         &#xe674;
          <span class="home-grid-font">30天无忧退货</span>
        </li>
        <li class="iconfont">
@@ -36,14 +36,58 @@
      </ul>
    </div>
    <VantGrid class="home-grid-button"></VantGrid>
-
+   <div class="home-newer">
+      <div class="home-newer-con"> — 新人专享礼 —</div>
+      <div class="home-newer-img">
+        <div class="home-newer-left">
+          <span class="newer-con">新人专享礼包</span>
+          <img src="//yanxuan.nosdn.127.net/ba4d635ec94ad95b28bfab6500900659.png" alt="">
+        </div>
+        <div class="home-newer-right">
+          <div class="newer-right-top">
+              <div class="right-top-one">
+                <div class="top-one">福利社</div>
+                <div class="top-two">今日特价</div>
+              </div>
+              <img class="top-img" src="https://yanxuan-item.nosdn.127.net/eddaeb4852b8a4732102eab839641c95.png?imageView&thumbnail=200x200&quality=75" alt="" >
+              <span class="top-circle">
+                <span class="circle-one">￥199</span>
+                <span class="circle-two">￥399</span>
+              </span>
+          </div>
+          <div class="newer-right-button">
+            <div class="right-top-one">
+              <div class="top-one">福利社</div>
+              <div class="top-two">今日特价</div>
+            </div>
+            <img class="top-img" src="https://yanxuan-item.nosdn.127.net/bb9025c24057dfb89403055ac5b9f85c.png?imageView&thumbnail=200x200&quality=75" alt="" >
+            <span class="top-circle">
+                <span class="circle-one">￥111</span>
+                <span class="circle-two">￥311</span>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+   <div class="home-pro">
+     <div class="home-pro-title">
+        <span class="pro-title-one">品牌制造商</span>
+        <span class="pro-title-two">更多 ></span>
+     </div>
+     <ul class="home-pro-con">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ul>
+   </div>
  </div>
 </template>
 
 <script>
-  import VantSwipe from "../../pages/Vant-swipe/Vant-swipe"
-  import VantTab from "../../pages/Vant-tab/Vant-tab"
-  import VantGrid from "../../pages/Vant-grid/Vant-grid"
+  import VantSwipe from "../../components/Vant-swipe/Vant-swipe"
+  import VantTab from "../../components/Vant-tab/Vant-tab"
+  import VantGrid from "../../components/Vant-grid/Vant-grid"
   import Vue from 'vue';
   import { Icon } from 'vant';
   Vue.use(Icon);
@@ -52,13 +96,15 @@
     components:{
       VantSwipe,
       VantTab,
-      VantGrid
+      VantGrid,
+
     },
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 @import "../../common/stylus/mixins.styl"
+@import "../../common/stylus/extend.styl"
   .header-container
     overflow hidden
     background-color #fff;
@@ -136,4 +182,141 @@
 
   .home-grid-button
     top-border-1px(#A0C5E8)
+  .home-newer
+    width 100%
+    top-border-5px(#A0C5E8)
+    .home-newer-con
+      padding-top rem(30)
+      text-align center
+      font-size rem(32)
+    .home-newer-img
+      margin-top rem(15)
+      display flex
+      justify-content space-around
+      .home-newer-left
+          width 45%
+          height rem(400)
+          background-color pink
+          display flex
+          justify-content center
+          align-items center
+          position relative
+          .newer-con
+            font-size rem(30)
+            position absolute
+            left rem(20)
+            top rem(15)
+          img
+            width 70%
+            height 50%
+      .home-newer-right
+          width 45%
+          .newer-right-top
+            height rem(195)
+            background pink
+            position relative
+            .top-img
+              position absolute
+              top rem(0)
+              right rem(0)
+              width rem(200)
+              height rem(200)
+            .top-circle
+              width rem(80)
+              height rem(80)
+              background-color #fff35d
+              border-radius 50%
+              position absolute
+              top rem(20)
+              right rem(20)
+              display flex
+              flex-direction column
+              align-items center
+              justify-content center
+              .circle-one
+                width rem(20)
+                height rem(20)
+                font-size rem(8)
+                padding-right  rem(48)
+                padding-top rem(5)
+              .circle-two
+                width rem(20)
+                height rem(20)
+                font-size rem(8)
+                padding-right  rem(48)
+                padding-top rem(5)
+                text-decoration line-through
+            .right-top-one
+              position absolute
+              top rem(20)
+              left rem(40)
+              .top-one
+                font-size rem(30)
+              .top-two
+                font-size rem(20)
+                color #030906
+          .newer-right-button
+            position relative
+            height rem(195)
+            background #ff54a3
+            margin-top rem(10)
+            .top-img
+              position absolute
+              top rem(0)
+              right rem(0)
+              width rem(200)
+              height rem(200)
+            .top-circle
+              width rem(80)
+              height rem(80)
+              background-color #fff35d
+              border-radius 50%
+              position absolute
+              top rem(20)
+              right rem(20)
+              display flex
+              flex-direction column
+              align-items center
+              justify-content center
+              .circle-one
+                width rem(20)
+                height rem(20)
+                font-size rem(8)
+                padding-right  rem(48)
+                padding-top rem(5)
+              .circle-two
+                width rem(20)
+                height rem(20)
+                font-size rem(8)
+                padding-right  rem(48)
+                padding-top rem(5)
+                text-decoration line-through
+            .right-top-one
+              position absolute
+              top rem(20)
+              left rem(40)
+              .top-one
+                font-size rem(30)
+              .top-two
+                font-size rem(20)
+                color #030906
+
+
+  .home-pro
+    top-border-5px(#A0C5E8)
+    margin-top rem(30)
+    width 100%
+    .home-pro-title
+      @extend .clearfix
+      padding-top rem(30)
+      .pro-title-one
+          font-size rem(32)
+          float left
+          margin-left rem(20)
+      .pro-title-two
+          font-size rem(24)
+          float right
+          margin-right rem(20)
+
+
 </style>

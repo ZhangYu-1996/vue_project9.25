@@ -3,8 +3,10 @@ import App from './App.vue'
 import router from "@/router"
 import "@/mock"
 import "@/common/stylus/icon.styl"
+import HeaderTop from "components/HeaderTop/HeaderTop"
 
 Vue.config.productionTip = false;
+Vue.component("HeaderTop",HeaderTop);
 
 (function () {
   var styleNode=document.createElement("style");
